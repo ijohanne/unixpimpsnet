@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="unixpimps.net — Unix enthusiasts. System architects. We build things that run.">
+  <meta name="author" content="sysops@unixpimps.net">
+  <meta name="theme-color" content="#050505">
+
+  <title>unixpimps.net</title>
+
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+  <link rel="icon" type="image/x-icon" href="/favicon.ico">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:ital,wght@0,300;0,400;0,500;1,400&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/assets/css/style.css">
+</head>
+<body>
+  <!-- CRT overlays -->
+  <div class="scanlines" aria-hidden="true"></div>
+  <div class="noise" aria-hidden="true"></div>
+
+  <!-- Navigation -->
+  <nav class="nav" id="nav">
+    <div class="nav-inner">
+      <a href="#hero" class="nav-brand">
+        <svg class="nav-logo" viewBox="0 0 28 28" width="28" height="28" aria-hidden="true">
+          <rect width="28" height="28" rx="5" fill="rgba(0,255,65,0.1)" stroke="#00ff41" stroke-width="1"/>
+          <path d="M6 9 L13 14 L6 19" fill="none" stroke="#00ff41" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+          <rect x="15" y="17" width="7" height="2" rx="1" fill="#00ff41"/>
+        </svg>
+        <span>unixpimps</span>
+      </a>
+      <div class="nav-links">
+        <a href="#about">whoami</a>
+        <a href="#projects">projects</a>
+        <a href="#contact">contact</a>
+      </div>
+      <button class="nav-toggle" id="nav-toggle" aria-label="Toggle navigation">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- Mobile menu -->
+  <div class="mobile-menu" id="mobile-menu">
+    <a href="#about">whoami</a>
+    <a href="#projects">projects</a>
+    <a href="#contact">contact</a>
+  </div>
+
+  <main>
+    <!-- ==================== Hero ==================== -->
+    <section id="hero" class="hero">
+      <div class="hero-content">
+        <div class="hero-logo" aria-hidden="true">
+          <svg viewBox="0 0 512 512" class="logo-svg">
+            <defs>
+              <filter id="glow">
+                <feGaussianBlur stdDeviation="6" result="blur"/>
+                <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+              </filter>
+            </defs>
+            <!-- Terminal frame -->
+            <rect x="16" y="16" width="480" height="480" rx="40" fill="#0a0e0a" stroke="#00ff41" stroke-width="3" opacity="0.8"/>
+            <!-- Title bar -->
+            <rect x="16" y="16" width="480" height="56" rx="40" fill="#111"/>
+            <rect x="16" y="44" width="480" height="28" fill="#111"/>
+            <!-- Window dots -->
+            <circle cx="52" cy="44" r="8" fill="#ff5f57"/>
+            <circle cx="76" cy="44" r="8" fill="#febc2e"/>
+            <circle cx="100" cy="44" r="8" fill="#28c840"/>
+            <!-- Prompt chevron -->
+            <path d="M100 200 L200 280 L100 360" fill="none" stroke="#00ff41" stroke-width="36" stroke-linecap="round" stroke-linejoin="round" filter="url(#glow)"/>
+            <!-- Blinking cursor -->
+            <rect x="240" y="330" width="140" height="30" rx="4" fill="#00ff41" filter="url(#glow)">
+              <animate attributeName="opacity" values="1;1;0;0;1" dur="1.2s" repeatCount="indefinite"/>
+            </rect>
+          </svg>
+        </div>
+
+        <h1 class="hero-title">
+          <span class="hero-prompt">$</span> unixpimps<span class="hero-tld">.net</span>
+        </h1>
+
+        <p class="hero-tagline" id="tagline">
+          <span class="tagline-text"></span><span class="cursor-blink">&block;</span>
+        </p>
+
+        <a href="#about" class="hero-cta">
+          <span>explore</span>
+          <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true">
+            <path d="M8 3v10M3 8l5 5 5-5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </a>
+      </div>
+    </section>
+
+    <!-- ==================== About ==================== -->
+    <section id="about" class="section reveal">
+      <div class="container">
+        <h2 class="section-heading"><span class="prompt">#</span> whoami</h2>
+        <div class="about-grid">
+          <div class="about-text">
+            <p class="about-lead">A collective of Unix enthusiasts and system architects who believe in open source, declarative infrastructure, and elegant system design.</p>
+            <p>We build tools, run services, and maintain infrastructure &mdash; all managed with <strong>NixOS</strong> because we believe systems should be reproducible, declarative, and version-controlled. When we&rsquo;re not wrangling configs, we&rsquo;re probably arguing about text editors.</p>
+          </div>
+          <div class="terminal-window">
+            <div class="terminal-bar">
+              <span class="terminal-dot red"></span>
+              <span class="terminal-dot yellow"></span>
+              <span class="terminal-dot green"></span>
+              <span class="terminal-title">sysops@unixpimps:~</span>
+            </div>
+            <div class="terminal-body">
+              <div class="terminal-line"><span class="t-prompt">$</span> neofetch --short</div>
+              <div class="terminal-line">&nbsp;</div>
+              <div class="terminal-line"><span class="t-key">collective</span>unixpimps.net</div>
+              <div class="terminal-line"><span class="t-key">os</span>NixOS (btw)</div>
+              <div class="terminal-line"><span class="t-key">uptime</span>since 2020</div>
+              <div class="terminal-line"><span class="t-key">shell</span>fish</div>
+              <div class="terminal-line"><span class="t-key">infra</span>declarative, always</div>
+              <div class="terminal-line"><span class="t-key">editor</span>the correct one</div>
+              <div class="terminal-line"><span class="t-key">philosophy</span>keep it simple</div>
+              <div class="terminal-line">&nbsp;</div>
+              <div class="terminal-line"><span class="t-prompt">$</span> <span class="cursor-blink">&block;</span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== Projects ==================== -->
+    <section id="projects" class="section reveal">
+      <div class="container">
+        <h2 class="section-heading"><span class="prompt">#</span> ls ~/projects</h2>
+        <div class="projects-grid">
+          <a href="https://shouldidrink.today" target="_blank" rel="noopener noreferrer" class="project-card">
+            <div class="project-icon">&#x1F37A;</div>
+            <h3>shouldidrink.today</h3>
+            <p>The internet&rsquo;s most reliable decision engine for life&rsquo;s most pressing question. Highly scientific. Peer reviewed (at the bar).</p>
+            <span class="project-link">visit &rarr;</span>
+          </a>
+          <div class="project-card">
+            <div class="project-icon">&#x2744;&#xFE0F;</div>
+            <h3>nix modules</h3>
+            <p>Reusable NixOS modules for all our services. Declarative configuration from the ground up. Flakes all the way down.</p>
+            <span class="project-link">it&rsquo;s flakes</span>
+          </div>
+          <a href="https://github.com/ijohanne" target="_blank" rel="noopener noreferrer" class="project-card">
+            <div class="project-icon">&#x26A1;</div>
+            <h3>open source</h3>
+            <p>Contributions to the open source ecosystem. NixOS packages, tools, and the occasional upstream fix.</p>
+            <span class="project-link">github &rarr;</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== Contact ==================== -->
+    <section id="contact" class="section reveal">
+      <div class="container">
+        <h2 class="section-heading"><span class="prompt">#</span> contact</h2>
+        <div class="contact-content">
+          <div class="terminal-window">
+            <div class="terminal-bar">
+              <span class="terminal-dot red"></span>
+              <span class="terminal-dot yellow"></span>
+              <span class="terminal-dot green"></span>
+              <span class="terminal-title">mail</span>
+            </div>
+            <div class="terminal-body">
+              <div class="terminal-line"><span class="t-prompt">$</span> echo "get in touch"</div>
+              <div class="terminal-line">&nbsp;</div>
+              <div class="terminal-line"><span class="t-key">email</span><a href="mailto:sysops@unixpimps.net">sysops@unixpimps.net</a></div>
+              <div class="terminal-line"><span class="t-key">github</span><a href="https://github.com/ijohanne" target="_blank" rel="noopener noreferrer">github.com/ijohanne</a></div>
+              <div class="terminal-line"><span class="t-key">repo</span><a href="https://github.com/ijohanne/unixpimpsnet" target="_blank" rel="noopener noreferrer">github.com/ijohanne/unixpimpsnet</a></div>
+              <div class="terminal-line">&nbsp;</div>
+              <div class="terminal-line"><span class="t-prompt">$</span> <span class="cursor-blink">&block;</span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-inner">
+        <p>&copy; 2026 unixpimps.net</p>
+        <p class="footer-meta">built with <span class="green">nix</span> &middot; served by <span class="green">nginx</span> &middot; no javascript frameworks were harmed</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="/assets/js/main.js"></script>
+</body>
+</html>

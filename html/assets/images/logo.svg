@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+  <defs>
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="6" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+  <!-- Terminal frame -->
+  <rect x="16" y="16" width="480" height="480" rx="40" fill="#0a0e0a" stroke="#00ff41" stroke-width="3" opacity="0.8"/>
+  <!-- Title bar -->
+  <rect x="16" y="16" width="480" height="56" rx="40" fill="#111"/>
+  <rect x="16" y="44" width="480" height="28" fill="#111"/>
+  <!-- Window dots -->
+  <circle cx="52" cy="44" r="8" fill="#ff5f57"/>
+  <circle cx="76" cy="44" r="8" fill="#febc2e"/>
+  <circle cx="100" cy="44" r="8" fill="#28c840"/>
+  <!-- Prompt chevron -->
+  <path d="M100 200 L200 280 L100 360" fill="none" stroke="#00ff41" stroke-width="36" stroke-linecap="round" stroke-linejoin="round" filter="url(#glow)"/>
+  <!-- Cursor -->
+  <rect x="240" y="330" width="140" height="30" rx="4" fill="#00ff41" filter="url(#glow)"/>
+</svg>
