@@ -18,7 +18,7 @@
           pkgs = nixpkgs.legacyPackages.${system};
           serve = pkgs.writeShellScriptBin "serve" ''
             echo "Serving unixpimps.net at http://localhost:8080"
-            ${pkgs.nodePackages.http-server}/bin/http-server ${htmlRoot} -p 8080
+            ${pkgs.nodePackages.http-server}/bin/http-server ./html -p 8080
           '';
         in
         {
