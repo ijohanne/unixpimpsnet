@@ -49,9 +49,15 @@ document.addEventListener('DOMContentLoaded', () => {
         }
       });
     },
-    { threshold: 0.08, rootMargin: '0px 0px -40px 0px' }
+    { threshold: 0.01, rootMargin: '0px 0px 0px 0px' }
   );
-  revealEls.forEach((el) => observer.observe(el));
+  revealEls.forEach((el) => {
+    // Reveal immediately if already in viewport
+    if (el.getBoundingClientRect().top < window.innerHeight) {
+      el.classList.add('visible');
+    }
+    observer.observe(el);
+  });
 
   // --- Mobile menu ---
   const toggle = document.getElementById('nav-toggle');
