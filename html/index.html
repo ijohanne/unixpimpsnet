@@ -35,6 +35,7 @@
       <div class="nav-links">
         <a href="#about">whoami</a>
         <a href="#projects">projects</a>
+        <a href="#ai">ai</a>
         <a href="#contact">contact</a>
       </div>
       <button class="nav-toggle" id="nav-toggle" aria-label="Toggle navigation">
@@ -47,6 +48,7 @@
   <div class="mobile-menu" id="mobile-menu">
     <a href="#about">whoami</a>
     <a href="#projects">projects</a>
+    <a href="#ai">ai</a>
     <a href="#contact">contact</a>
   </div>
 
@@ -142,17 +144,50 @@
             <p>The internet&rsquo;s most reliable decision engine for life&rsquo;s most pressing question. Highly scientific. Peer reviewed (at the bar).</p>
             <span class="project-link">visit &rarr;</span>
           </a>
-          <div class="project-card">
-            <div class="project-icon">&#x2744;&#xFE0F;</div>
-            <h3>nix modules</h3>
-            <p>Reusable NixOS modules for all our services. Declarative configuration from the ground up. Flakes all the way down.</p>
-            <span class="project-link">it&rsquo;s flakes</span>
-          </div>
+          <a href="https://github.com/ijohanne/screeny" target="_blank" rel="noopener noreferrer" class="project-card">
+            <div class="project-icon">&#x1F4F8;</div>
+            <h3>screeny</h3>
+            <p>Screenshot OCR platform with a Rust backend, React dashboard, and a public Next.js events site. Nix-packaged, naturally.</p>
+            <span class="project-link">github &rarr;</span>
+          </a>
           <div class="project-card">
             <div class="project-icon">&#x26A1;</div>
             <h3>open source</h3>
-            <p>Contributions to the open source ecosystem. NixOS packages, tools, and the occasional upstream fix.</p>
+            <p>NixOS modules, packages, tools, and upstream fixes. Flakes all the way down.</p>
             <span class="project-link"><a href="https://github.com/ijohanne" target="_blank" rel="noopener noreferrer">ijohanne</a> · <a href="https://github.com/martin8412" target="_blank" rel="noopener noreferrer">martin8412</a></span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== AI ==================== -->
+    <section id="ai" class="section reveal">
+      <div class="container">
+        <h2 class="section-heading"><span class="prompt">#</span> cat /proc/ai</h2>
+        <div class="about-grid">
+          <div class="about-text">
+            <p class="about-lead">We don&rsquo;t fear the robots &mdash; we put them to work.</p>
+            <p>Big fans of <strong>OpenAI</strong> and <strong>Anthropic</strong> over here. Turns out the secret to AI isn&rsquo;t artificial intelligence &mdash; it&rsquo;s knowing how to write a proper prompt. Years of wrangling Unix man pages finally paying off.</p>
+            <p>From automating infrastructure to generating code, we lean hard on LLMs as daily tools. Claude writes our commit messages. GPT argues with our linter. We prompt, therefore we ship.</p>
+          </div>
+          <div class="terminal-window">
+            <div class="terminal-bar">
+              <span class="terminal-dot red"></span>
+              <span class="terminal-dot yellow"></span>
+              <span class="terminal-dot green"></span>
+              <span class="terminal-title">llm-session</span>
+            </div>
+            <div class="terminal-body">
+              <div class="terminal-line"><span class="t-prompt">$</span> echo $AI_STACK</div>
+              <div class="terminal-line">&nbsp;</div>
+              <div class="terminal-line"><span class="t-key">anthropic</span>Claude &mdash; pair programmer, co-author</div>
+              <div class="terminal-line"><span class="t-key">openai</span>GPT &mdash; the other voice in the room</div>
+              <div class="terminal-line"><span class="t-key">approach</span>prompt engineering, not praying</div>
+              <div class="terminal-line"><span class="t-key">philosophy</span>tools, not magic</div>
+              <div class="terminal-line"><span class="t-key">secret</span>read the docs (even the AI ones)</div>
+              <div class="terminal-line">&nbsp;</div>
+              <div class="terminal-line"><span class="t-prompt">$</span> <span class="cursor-blink">&block;</span></div>
+            </div>
           </div>
         </div>
       </div>
