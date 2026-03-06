@@ -24,6 +24,17 @@
         {
           default = pkgs.mkShell {
             packages = [ serve ];
+            shellHook = ''
+              echo ""
+              echo "  ┌──────────────────────────────────────────┐"
+              echo "  │  >_ unixpimps.net dev shell              │"
+              echo "  │                                          │"
+              echo "  │  serve   — start local server on :8080   │"
+              echo "  │                                          │"
+              echo "  │  «we prompt, therefore we ship»          │"
+              echo "  └──────────────────────────────────────────┘"
+              echo ""
+            '';
           };
         });
     };
