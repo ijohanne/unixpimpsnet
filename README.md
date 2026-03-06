@@ -8,7 +8,7 @@ Add this flake to your NixOS configuration:
 
 ```nix
 {
-  inputs.unixpimpsnet.url = "github:martin8412/unixpimpsnet";
+  inputs.unixpimpsnet.url = "github:ijohanne/unixpimpsnet";
 
   outputs = { nixpkgs, unixpimpsnet, ... }: {
     nixosConfigurations.myhost = nixpkgs.lib.nixosSystem {
